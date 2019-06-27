@@ -11,7 +11,7 @@ class Weather extends React.Component {
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition((position) => {
-      // this.fetchWeather(position.coords.latitude, position.coords.longitude);
+      this.fetchWeather(position.coords.latitude, position.coords.longitude);
     });
   }
 

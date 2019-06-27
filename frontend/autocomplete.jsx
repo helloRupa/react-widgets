@@ -25,6 +25,7 @@ class Autocomplete extends React.Component {
     return (
       <div className="autocomplete">
         <input type="text" onChange={this.updateInput} value={this.state.inputVal}></input>
+        
         <ul>
           { this.props.names.map(name => (
             <li key={name} 
