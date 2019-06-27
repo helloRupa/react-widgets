@@ -51,12 +51,14 @@ h1, h2 {
 }
 
 .tabs {
+  display: inline-block;
   width: 250px;
   height: 150px;
   background-color: #bcf1ff;
   box-sizing: border-box;
   margin-top: 48px;
   border: 1px solid #000;
+  vertical-align: top;
 }
 
 .tabs ul {
@@ -115,4 +117,43 @@ h1, h2 {
 
 .weather p:last-of-type {
   margin-bottom: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.autocomplete {
+  display: inline-block;
+  width: 200px;
+  background-color: #ffd6dd;
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.autocomplete input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.autocomplete ul {
+  width: 115px;
+  margin: auto;
+}
+
+.autocomplete li {
+  cursor: pointer;
+  padding: 5px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
