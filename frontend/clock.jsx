@@ -1,13 +1,48 @@
 import React from 'react';
 
 class Clock extends React.Component {
-  constructor() {
+  constructor(props) {
+    super(props);
+    this.state = { time: new Date() };
+    this.tick = this.tick.bind(this);
+  }
 
+  tick() {
+    this.setState({ time: new Date() });
+  }
+
+  formatTime(val) {
+    return val < 10 ? `0${val}` : val;
+  }
+
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      this.tick();
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
 
   render() {
+    const {time} = this.state;
+    const hours = time.getHours();
+    const mins = time.getMinutes();
+    const secs = time.getSeconds();
+    const timezone = time.toLocaleString('en', {timeZoneName:'short'}).split(' ').pop();
+
     return (
-      test
+      <div>
+        <h1>Clock</h1>
+        <h2>Time</h2>
+        <span>
+          { this.formatTime(hours) }:
+          { this.formatTime(mins) }:
+          { this.formatTime(secs) }
+          { timezone }
+        </span>
+      </div>
     );
   }
 }
