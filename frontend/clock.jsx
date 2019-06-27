@@ -33,15 +33,26 @@ class Clock extends React.Component {
     const timezone = time.toLocaleString('en', {timeZoneName:'short'}).split(' ').pop();
 
     return (
-      <div>
+      <div className="clock">
         <h1>Clock</h1>
-        <h2>Time</h2>
-        <span>
-          { this.formatTime(hours) }:
-          { this.formatTime(mins) }:
-          { this.formatTime(secs) }
-          { timezone }
-        </span>
+
+        <div>
+          <div className="wrapper">
+            <h2>Time</h2>
+            <span>
+              { this.formatTime(hours) }:
+              { this.formatTime(mins) }:
+              { this.formatTime(secs) }
+              { timezone }
+            </span>
+          </div>
+          <div className="wrapper">
+            <h2>Date</h2>
+            <span>
+              { time.toDateString() }
+            </span>
+          </div>
+        </div>
       </div>
     );
   }
