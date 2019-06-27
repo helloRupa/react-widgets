@@ -80,6 +80,10 @@ h1, h2 {
   cursor: pointer;
 }
 
+.tabs li:hover {
+  color: #141c74;
+}
+
 .tabs article {
   padding: 20px;
   margin-top: 20px;
@@ -93,4 +97,22 @@ h1, h2 {
 .forward {
   font-weight: bold;
   border-bottom: none;
+}
+
+.weather {
+  margin: 36px 0 64px 0;
+}
+
+.weather div {
+  background-color: #ffd78e;
+  text-align: center;
+  padding: 20px;
+}
+
+.weather p {
+  margin-bottom: 16px;
+}
+
+.weather p:last-of-type {
+  margin-bottom: 0;
 }
