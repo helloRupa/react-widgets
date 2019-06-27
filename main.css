@@ -1,4 +1,4 @@
-html, body, main, div, section, span, h1, h2, h3, p {
+html, body, main, div, section, span, h1, h2, h3, p, ul, li {
   background-color: transparent;
   border: none;
   outline: none;
@@ -10,9 +10,14 @@ html, body, main, div, section, span, h1, h2, h3, p {
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   font-size: 24px;
   font-weight: 400;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .main {
@@ -43,4 +48,49 @@ h1, h2 {
 .clock > div {
   background-color: #8cefa5;
   padding: 20px;
+}
+
+.tabs {
+  width: 250px;
+  height: 150px;
+  background-color: #bcf1ff;
+  box-sizing: border-box;
+  margin-top: 48px;
+  border: 1px solid #000;
+}
+
+.tabs ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  margin-left: -1px;
+}
+
+.tabs li {
+  margin-top: -36px;
+  background-color: #bcf1ff;
+  width: 83px;
+  border-radius: 8px 8px 0 0;
+  padding-top: 6px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  margin-right: -2px;
+  cursor: pointer;
+}
+
+.tabs article {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.back {
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+}
+
+.forward {
+  font-weight: bold;
+  border-bottom: none;
 }
